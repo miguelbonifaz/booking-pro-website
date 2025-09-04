@@ -1,15 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #10b981;
-  --color-primary-dark: #059669;
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
   --color-secondary: #6b7280;
   --color-accent: #f59e0b;
   --color-dark: #1f2937;
   --color-light: #f8fafc;
+  --color-purple: #8b5cf6;
+  --color-purple-dark: #7c3aed;
+  --color-cyan: #06b6d4;
+  --color-cyan-dark: #0891b2;
 
   --font-sans: InterVariable, sans-serif;
-  --font-sans--font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  --font-sans--font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
 /* Custom utilities */
@@ -18,5 +22,5 @@
 }
 
 @utility btnwhatsapp {
-  @apply bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full inline-flex items-center gap-3 text-lg transition-all duration-300 transform hover:scale-105 shadow-lg;
+  @apply bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full inline-flex items-center gap-3 text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-blue-500/25;
 }
