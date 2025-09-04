@@ -98,11 +98,10 @@
 @keyframes pulseGlow {
   0%,
   100% {
-    text-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
   }
   50% {
-    text-shadow: 0 0 20px rgba(59, 130, 246, 0.8),
-      0 0 30px rgba(139, 92, 246, 0.6);
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.8)) drop-shadow(0 0 30px rgba(139, 92, 246, 0.6));
   }
 }
 
