@@ -50,9 +50,15 @@
 
             <!-- Mobile menu button -->
             <div class="md:hidden">
-              <button type="button" class="text-gray-400 hover:text-white">
+              <button
+                id="mobile-menu-button"
+                type="button"
+                class="text-gray-400 hover:text-white transition-colors"
+                aria-label="Toggle menu"
+              >
                 <svg
-                  class="h-6 w-6"
+                  id="menu-icon"
+                  class="h-6 w-6 transition-transform duration-300"
                   stroke="currentColor"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -64,7 +70,50 @@
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 </svg>
+                <svg
+                  id="close-icon"
+                  class="h-6 w-6 hidden transition-transform duration-300"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
               </button>
+            </div>
+          </div>
+
+          <!-- Mobile menu -->
+          <div
+            id="mobile-menu"
+            class="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-b border-white/10 transform -translate-y-full opacity-0 invisible transition-all duration-300 ease-out"
+          >
+            <div class="px-4 pt-2 pb-3 space-y-1">
+              <a
+                href="#"
+                class="block px-3 py-2 text-gray-300 hover:text-blue-400 hover:bg-white/5 rounded-md font-medium transition-all duration-200"
+                >Inicio</a
+              >
+              <a
+                href="#"
+                class="block px-3 py-2 text-gray-300 hover:text-blue-400 hover:bg-white/5 rounded-md font-medium transition-all duration-200"
+                >Problema</a
+              >
+              <a
+                href="#"
+                class="block px-3 py-2 text-gray-300 hover:text-blue-400 hover:bg-white/5 rounded-md font-medium transition-all duration-200"
+                >Características</a
+              >
+              <a
+                href="#"
+                class="block px-3 py-2 text-gray-300 hover:text-blue-400 hover:bg-white/5 rounded-md font-medium transition-all duration-200"
+                >Demo</a
+              >
             </div>
           </div>
         </div>
@@ -77,18 +126,63 @@
         <div class="relative z-10 max-w-4xl mx-auto text-center">
           <!-- Main Heading -->
           <h1
-            class="text-4xl md:text-6xl font-extrabold text-white mb-8 leading-tight"
+            id="hero-title"
+            class="text-4xl md:text-6xl font-extrabold text-white mb-8 leading-tight opacity-0 transform translate-y-8"
           >
-            Deja de Perder Clientes por No Contestar
             <span
-              class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+              class="inline-block animate-fade-in-up"
+              style="animation-delay: 0.2s"
+              >Deja</span
+            >
+            <span
+              class="inline-block animate-fade-in-up"
+              style="animation-delay: 0.3s"
+            >
+              de</span
+            >
+            <span
+              class="inline-block animate-fade-in-up"
+              style="animation-delay: 0.4s"
+            >
+              Perder</span
+            >
+            <span
+              class="inline-block animate-fade-in-up"
+              style="animation-delay: 0.5s"
+            >
+              Clientes</span
+            >
+            <span
+              class="inline-block animate-fade-in-up"
+              style="animation-delay: 0.6s"
+            >
+              por</span
+            >
+            <span
+              class="inline-block animate-fade-in-up"
+              style="animation-delay: 0.7s"
+            >
+              No</span
+            >
+            <span
+              class="inline-block animate-fade-in-up"
+              style="animation-delay: 0.8s"
+            >
+              Contestar</span
+            >
+            <br />
+            <span
+              class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent inline-block animate-fade-in-up animate-pulse-glow"
+              style="animation-delay: 1s"
               >WhatsApp</span
             >
           </h1>
 
           <!-- Subtitle -->
           <p
-            class="text-lg md:text-xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed"
+            id="hero-subtitle"
+            class="text-lg md:text-xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed opacity-0 transform translate-y-8 animate-fade-in-up"
+            style="animation-delay: 1.2s"
           >
             Tu negocio ahora puede atender y agendar citas automáticamente 24/7
             a través de WhatsApp - sin que tengas que contestar un solo mensaje
@@ -99,10 +193,14 @@
             class="grid md:grid-cols-2 gap-8 mb-16 text-left max-w-3xl mx-auto"
           >
             <!-- Feature 1 -->
-            <div class="flex items-start space-x-4">
+            <div
+              class="flex items-start space-x-4 opacity-0 transform translate-x-8 animate-slide-in-left"
+              style="animation-delay: 1.4s"
+            >
               <div class="flex-shrink-0">
                 <div
-                  class="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center"
+                  class="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center animate-bounce-gentle"
+                  style="animation-delay: 1.6s"
                 >
                   <svg
                     class="w-4 h-4 text-white"
@@ -127,10 +225,14 @@
             </div>
 
             <!-- Feature 2 -->
-            <div class="flex items-start space-x-4">
+            <div
+              class="flex items-start space-x-4 opacity-0 transform translate-x-8 animate-slide-in-right"
+              style="animation-delay: 1.6s"
+            >
               <div class="flex-shrink-0">
                 <div
-                  class="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center"
+                  class="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center animate-bounce-gentle"
+                  style="animation-delay: 1.8s"
                 >
                   <svg
                     class="w-4 h-4 text-white"
@@ -155,10 +257,14 @@
             </div>
 
             <!-- Feature 3 -->
-            <div class="flex items-start space-x-4">
+            <div
+              class="flex items-start space-x-4 opacity-0 transform translate-x-8 animate-slide-in-left"
+              style="animation-delay: 1.8s"
+            >
               <div class="flex-shrink-0">
                 <div
-                  class="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center"
+                  class="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center animate-bounce-gentle"
+                  style="animation-delay: 2s"
                 >
                   <svg
                     class="w-4 h-4 text-white"
@@ -183,10 +289,14 @@
             </div>
 
             <!-- Feature 4 -->
-            <div class="flex items-start space-x-4">
+            <div
+              class="flex items-start space-x-4 opacity-0 transform translate-x-8 animate-slide-in-right"
+              style="animation-delay: 2s"
+            >
               <div class="flex-shrink-0">
                 <div
-                  class="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center"
+                  class="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center animate-bounce-gentle"
+                  style="animation-delay: 2.2s"
                 >
                   <svg
                     class="w-4 h-4 text-white"
@@ -212,10 +322,13 @@
           </div>
 
           <!-- CTA Button -->
-          <div class="mb-8">
-            <a href="#" class="btnwhatsapp">
+          <div
+            class="mb-8 opacity-0 transform scale-75 animate-zoom-in"
+            style="animation-delay: 2.4s"
+          >
+            <a href="#" class="btnwhatsapp group">
               <svg
-                class="w-6 h-6"
+                class="w-6 h-6 transition-transform duration-300 group-hover:rotate-12"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -232,7 +345,10 @@
           </div>
 
           <!-- Bottom text -->
-          <p class="text-gray-400 text-lg">
+          <p
+            class="text-gray-400 text-lg opacity-0 animate-fade-in"
+            style="animation-delay: 2.6s"
+          >
             Escribe a nuestro bot y ve cómo funcionaría en TU negocio
           </p>
         </div>
@@ -240,13 +356,16 @@
         <!-- Efectos de luz en el fondo -->
         <div class="absolute inset-0">
           <div
-            class="absolute -top-32 -left-32 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen opacity-20 blur-3xl"
+            class="absolute -top-32 -left-32 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen opacity-20 blur-3xl animate-float"
+            style="animation-delay: 0s"
           ></div>
           <div
-            class="absolute bottom-0 right-0 w-80 h-80 bg-purple-600 rounded-full mix-blend-screen opacity-20 blur-3xl"
+            class="absolute bottom-0 right-0 w-80 h-80 bg-purple-600 rounded-full mix-blend-screen opacity-20 blur-3xl animate-float"
+            style="animation-delay: 2s"
           ></div>
           <div
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-screen opacity-10 blur-3xl"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-screen opacity-10 blur-3xl animate-float"
+            style="animation-delay: 4s"
           ></div>
         </div>
       </section>
@@ -254,6 +373,87 @@
 
     <script type="module">
       import "./src/main.css";
+
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
+
+      let isMenuOpen = false;
+
+      mobileMenuButton.addEventListener("click", () => {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+          // Open menu
+          mobileMenu.classList.remove(
+            "-translate-y-full",
+            "opacity-0",
+            "invisible"
+          );
+          mobileMenu.classList.add("translate-y-0", "opacity-100", "visible");
+          menuIcon.classList.add("hidden");
+          closeIcon.classList.remove("hidden");
+        } else {
+          // Close menu
+          mobileMenu.classList.add(
+            "-translate-y-full",
+            "opacity-0",
+            "invisible"
+          );
+          mobileMenu.classList.remove(
+            "translate-y-0",
+            "opacity-100",
+            "visible"
+          );
+          menuIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+        }
+      });
+
+      // Close menu when clicking on a link
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          isMenuOpen = false;
+          mobileMenu.classList.add(
+            "-translate-y-full",
+            "opacity-0",
+            "invisible"
+          );
+          mobileMenu.classList.remove(
+            "translate-y-0",
+            "opacity-100",
+            "visible"
+          );
+          menuIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          isMenuOpen &&
+          !mobileMenuButton.contains(e.target) &&
+          !mobileMenu.contains(e.target)
+        ) {
+          isMenuOpen = false;
+          mobileMenu.classList.add(
+            "-translate-y-full",
+            "opacity-0",
+            "invisible"
+          );
+          mobileMenu.classList.remove(
+            "translate-y-0",
+            "opacity-100",
+            "visible"
+          );
+          menuIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+        }
+      });
     </script>
   </body>
 </html>
