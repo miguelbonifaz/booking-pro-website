@@ -12,35 +12,36 @@
     />
     <link rel="stylesheet" href="src/main.css" />
   </head>
-  <body class="font-sans bg-gray-50 text-gray-900">
+  <body class="font-sans text-gray-900">
+    <div class="bg-gradient-to-b from-gray-900 via-black to-gray-900 min-h-screen">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm">
+    <nav class="bg-transparent shadow-sm relative z-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
           <div class="flex-shrink-0">
-            <h1 class="text-2xl font-bold text-gray-900">Booking Pro</h1>
+            <h1 class="text-2xl font-bold text-white">Booking Pro</h1>
           </div>
 
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
               <a
                 href="#"
-                class="text-gray-700 hover:text-primary font-medium transition-colors"
+                class="text-gray-300 hover:text-green-400 font-medium transition-colors"
                 >Inicio</a
               >
               <a
                 href="#"
-                class="text-gray-700 hover:text-primary font-medium transition-colors"
+                class="text-gray-300 hover:text-green-400 font-medium transition-colors"
                 >Problema</a
               >
               <a
                 href="#"
-                class="text-gray-700 hover:text-primary font-medium transition-colors"
+                class="text-gray-300 hover:text-green-400 font-medium transition-colors"
                 >Características</a
               >
               <a
                 href="#"
-                class="text-gray-700 hover:text-primary font-medium transition-colors"
+                class="text-gray-300 hover:text-green-400 font-medium transition-colors"
                 >Demo</a
               >
             </div>
@@ -48,7 +49,7 @@
 
           <!-- Mobile menu button -->
           <div class="md:hidden">
-            <button type="button" class="text-gray-400 hover:text-gray-500">
+            <button type="button" class="text-gray-400 hover:text-white">
               <svg
                 class="h-6 w-6"
                 stroke="currentColor"
@@ -69,19 +70,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto text-center">
+    <section class="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
         <!-- Main Heading -->
         <h1
-          class="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight"
+          class="text-4xl md:text-6xl font-extrabold text-white mb-8 leading-tight"
         >
           Deja de Perder Clientes por No Contestar
-          <span class="text-primary block mt-2">WhatsApp</span>
+          <span class="text-green-400 block mt-2">WhatsApp</span>
         </h1>
 
         <!-- Subtitle -->
         <p
-          class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed"
+          class="text-lg md:text-xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed"
         >
           Tu negocio ahora puede atender y agendar citas automáticamente 24/7 a
           través de WhatsApp - sin que tengas que contestar un solo mensaje
@@ -113,7 +114,7 @@
               </div>
             </div>
             <div>
-              <p class="text-gray-800 font-semibold text-lg">
+              <p class="text-gray-200 font-semibold text-lg">
                 Atiende automáticamente 24/7
               </p>
             </div>
@@ -141,7 +142,7 @@
               </div>
             </div>
             <div>
-              <p class="text-gray-800 font-semibold text-lg">
+              <p class="text-gray-200 font-semibold text-lg">
                 Convierte chats en citas confirmadas
               </p>
             </div>
@@ -169,7 +170,7 @@
               </div>
             </div>
             <div>
-              <p class="text-gray-800 font-semibold text-lg">
+              <p class="text-gray-200 font-semibold text-lg">
                 Maneja cancelaciones y reagendamientos
               </p>
             </div>
@@ -197,7 +198,7 @@
               </div>
             </div>
             <div>
-              <p class="text-gray-800 font-semibold text-lg">
+              <p class="text-gray-200 font-semibold text-lg">
                 Tu IA atiende mientras tu generas ingresos
               </p>
             </div>
@@ -217,11 +218,18 @@
         </div>
 
         <!-- Bottom text -->
-        <p class="text-gray-500 text-lg">
+        <p class="text-gray-400 text-lg">
           Escribe a nuestro bot y ve cómo funcionaría en TU negocio
         </p>
       </div>
+      
+      <!-- Efectos de luz en el fondo -->
+      <div class="absolute inset-0">
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-green-600 rounded-full mix-blend-screen opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-purple-600 rounded-full mix-blend-screen opacity-20 blur-3xl"></div>
+      </div>
     </section>
+    </div>
 
     <script type="module">
       import "./src/main.css";
