@@ -8,7 +8,8 @@
   --color-dark: #1f2937;
   --color-light: #f8fafc;
 
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-sans: InterVariable, sans-serif;
+  --font-sans--font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
 /* Custom utilities */
